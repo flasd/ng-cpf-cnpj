@@ -1,0 +1,48 @@
+{
+    "name": "ng-cpf-cnpj",
+    "version": "1.0.0",
+    "description": "AngularJS directive to validate CPF/CNPJ numbers.",
+    "main": "dist/index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-minify": "^0.3.0",
+        "babel-register": "^6.26.0",
+        "chai": "^4.1.2",
+        "coveralls": "^3.0.0",
+        "cpf_cnpj": "^0.2.0",
+        "cross-env": "^5.1.3",
+        "eslint": "^4.16.0",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.8.0",
+        "mocha": "^5.0.0",
+        "proxyquire": "^1.8.0",
+        "rimraf": "^2.6.2",
+        "sinon": "^4.2.2"
+    },
+    "scripts": {
+        "lint": "cross-env NODE_ENV=lint eslint src/**/*.js",
+        "test": "cross-env NODE_ENV=test mocha src/**/*.test.js --require babel-core/register",
+        "prebuild": "rimraf dist",
+        "build": "npm test && npm run lint && cross-env NODE_ENV=production babel src --ignore test.js -d dist",
+        "postbuild": "NODE_ENV=production babel src --ignore test.js -o dist/index.min.js --presets=minify"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/flasd/ng-cpf-cnpj.git"
+    },
+    "keywords": [
+        "angularjs",
+        "cpf",
+        "cnpj",
+        "validator"
+    ],
+    "author": "Marcel de Oliveira Coelho",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/flasd/ng-cpf-cnpj/issues"
+    },
+    "homepage": "https://github.com/flasd/ng-cpf-cnpj#readme"
+}
