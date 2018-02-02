@@ -2,7 +2,7 @@
     "name": "ng-cpf-cnpj",
     "version": "1.0.0",
     "description": "AngularJS directive to validate CPF/CNPJ numbers.",
-    "main": "dist/index.js",
+    "main": "dist/ng-cpf-cnpj.min.js",
     "dependencies": {},
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -25,9 +25,9 @@
     "scripts": {
         "lint": "cross-env NODE_ENV=lint eslint src/**/*.js",
         "test": "cross-env NODE_ENV=test mocha src/**/*.test.js --require babel-core/register",
-        "prebuild": "rimraf dist",
-        "build": "npm test && npm run lint && cross-env NODE_ENV=production babel src --ignore test.js -d dist",
-        "postbuild": "NODE_ENV=production babel src --ignore test.js -o dist/index.min.js --presets=minify"
+        "prebuild": "rimraf dist && mkdir dist",
+        "build": "npm test && npm run lint && cross-env NODE_ENV=production babel src --ignore test.js -o dist/ng-cpf-cnpj.js",
+        "postbuild": "NODE_ENV=production babel src --ignore test.js -o dist/ng-cpf-cnpj.min.js --presets=minify"
     },
     "repository": {
         "type": "git",
