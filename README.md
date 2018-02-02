@@ -2,7 +2,10 @@
 
 AngularJS directive to validate CPF/CNPJ numbers, using [cpf_cnpj.js](https://github.com/fnando/cpf_cnpj.js).
 
-## How to install
+[![Build Status](https://travis-ci.org/flasd/ng-cpf-cnpj.svg?branch=master)](https://travis-ci.org/flasd/ng-cpf-cnpj) 
+[![npm version](https://badge.fury.io/js/ng-cpf-cnpj.svg)](https://www.npmjs.com/package/ng-cpf-cnpj) 
+
+### Instalation
 
 ```npm install ng-cpf-cnpj --save```
 
@@ -17,7 +20,7 @@ And inject it to your angular.module
 
 ```angular.module('myApp', ['ngCpfCnpj']); ```
 
-## How to use
+### Usage
 
 Just add ```ng-cpf``` or ```ng-cnpj``` to any ```<input/>```. 
 
@@ -46,3 +49,7 @@ You can also use ```ui-mask```, from [ui-utils](https://github.com/angular-ui/ui
  
 </form>
 ```
+
+### Copyright and License
+
+Copyright (c) 2017 [Marcel de Oliveira Coelho](https://github.com/flasd) under the [MIT license](https://github.com/flasd/ng-cpf-cnpj/blob/master/LICENSE). Go Crazy. :rocket:
